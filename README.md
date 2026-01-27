@@ -1,5 +1,5 @@
 # koudijs.dev
-This is the offical website for myself and my company.
+This is the official website for myself and my company.
 
 I have used this [open theme to get started](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation).
 
