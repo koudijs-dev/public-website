@@ -37,8 +37,12 @@ A deep dive into using GitOps to drive the full lifecycle of MongoDB Atlas insta
 
 # Training
 
-I teach Kubernetes professionally through [ICT Improve](https://ict-improve.nl/training/delivering-modern-cloud-native-software-en), helping engineers go from zero to production-ready with modern cloud-native software delivery.
+I teach Kubernetes professionally through [ICT Improve](https://ict-improve.nl/). 
+
+I teach these courses:
+* [Delivering Modern Cloud-Native Software](https://ict-improve.nl/training/delivering-modern-cloud-native-software-en): understand better how Kubernetes exactly can deploy your workloads into production
+* [Applied AI for Test Automation with Playwright](https://ict-improve.nl/training/applied-ai-for-test-automation-with-playwright-en): using AI to write and maintain browser tests
 
 # What I'm Working On
 
-I'm actively developing **Reverse GitOps** as a formal concept, with a manifesto at [reversegitops.dev](https://reversegitops.dev) and an open-source working prototype at [ConfigButler/gitops-reverser](https://github.com/ConfigButler/gitops-reverser).
+Apart from my consultancy/trainer work, I've also been working on Reverse GitOps: an idea that actors deserve an API to indicate their intent, while Git remains the source of record. There's a write-up at [reversegitops.dev](https://reversegitops.dev) and an open-source prototype at [ConfigButler/gitops-reverser](https://github.com/ConfigButler/gitops-reverser).
