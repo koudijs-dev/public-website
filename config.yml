@@ -69,6 +69,9 @@ menu:
     - name: about
       url: about
       weight: 10
+    - name: speaking
+      url: speaking
+      weight: 10
     - name: search
       url: search/
       weight: 10
@@ -76,6 +79,11 @@ menu:
       name: tags
       url: tags
       weight: 20
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 taxonomies:
    tag: tags
