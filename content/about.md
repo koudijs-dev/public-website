@@ -3,23 +3,27 @@ title: "About"
 weight: 1
 ---
 
-koudijs.dev is the consulting, training, and speaking practice of Simon Koudijs, based in Amersfoort, the Netherlands.
+I help teams improve software delivery. From engineering workflows and CI/CD to platform engineering, Kubernetes, GitOps, and AI. Through koudijs.dev I work as a consultant, trainer, and speaker for organisations that want practical help, not hype.
 
-I work with teams on software delivery: engineering workflows, CI/CD, platform engineering, Kubernetes, GitOps, test automation, and AI in software delivery. Sometimes that means helping a team move toward better platform capabilities. Sometimes it means helping them decide that Kubernetes is not the right next step at all. I focus on practical progress and clear trade-offs.
+**Consulting** I work with teams on software delivery trade-offs: improving workflows, introducing better delivery practices, and helping decide whether Kubernetes and platform engineering are actually the right next step. [Get in touch](#book)
 
-* **Consulting** helping teams improve software delivery, make better architectural trade-offs, and introduce practical engineering practices
-* **Training** public and in-house courses on cloud-native software delivery and AI-assisted test automation
-* **Speaking** conference talks and sessions on GitOps, platform engineering, and software delivery
+**Training** I enjoy sharing knowledge on a variaty of topics. [More about training](/training)
 
-Alongside this work, I am also the founder of [ConfigButler](https://configbutler.com), where I build and explore API-first configuration management and developer experience in public.
+**Speaking** I speak at conferences and events on GitOps, platform engineering, and software delivery. [Talks and appearances](/speaking)
 
-[Book a call →](https://calendar.app.google/c2jMcQgREVgbKEj18)
-
----
-
-# Company info
+## Company info 🏡
 
 Official company name: Koudijs IT  
 Registered trade names: koudijs.dev, ConfigButler
 KvK number: 97788708  
 Based in Amersfoort, Utrecht, Netherlands
+
+## ConfigButler
+
+Alongside this work, I am also the founder of [ConfigButler](https://configbutler.ai), where I build and explore API-first configuration management and developer experience in public.
+
+Most work is open source and avaialble at [ConfigButlers GitHub page](https://github.com/configbutler).
+
+## Book a call ☎️
+
+If you want to explore working together, you can [book a slot directly in my calendar](https://calendar.app.google/c2jMcQgREVgbKEj18).
