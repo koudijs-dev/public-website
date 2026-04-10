@@ -37,7 +37,7 @@ A deep dive into using GitOps to drive the full lifecycle of MongoDB Atlas insta
 
 # Training
 
-I teach Kubernetes professionally through [ICT Improve](https://ict-improve.nl/). 
+I teach Kubernetes professionally through [ICT Improve](https://ict-improve.nl/).
 
 I teach these courses:
 * [Delivering Modern Cloud-Native Software](https://ict-improve.nl/training/delivering-modern-cloud-native-software-en): understand better how Kubernetes exactly can deploy your workloads into production

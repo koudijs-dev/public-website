@@ -6,12 +6,10 @@ pagination:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  title: koudijs.dev
+  description: "Consultant, trainer, and speaker on software delivery, platform engineering, Kubernetes, GitOps, and AI in engineering."
+  keywords: [Consulting, Training, Platform Engineering, Kubernetes, GitOps, Software Delivery, AI]
   author: Simon Koudijs
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -41,18 +39,18 @@ params:
 
   profileMode:
     enabled: true
-    subtitle: "I'm Simon, a software engineer building my own products and helping companies build better software."
-    imageUrl: "images/simon.jpg"
-    imageTitle: "Some guy"
+    subtitle: "Consultant, trainer, and speaker on software delivery, platform engineering, GitOps and of course AI."
+    imageUrl: "images/simon-2026.webp"
+    imageTitle: "Simon Koudijs"
     imageWidth: 220
     imageHeight: 220
     buttons:
-    - name: Substack
-      url: https://simonkoudijs.substack.com/
     - name: LinkedIn
       url: "https://www.linkedin.com/in/simonkoudijs/"
     - name: GitHub
       url: "https://github.com/sunib"
+    - name: Substack
+      url: https://simonkoudijs.substack.com/
 
 
 outputs:
@@ -63,15 +61,15 @@ outputs:
 
 menu:
   main:
-    - name: posts
-      url: posts
-      weight: 10
-    - name: about
-      url: about
+    - name: training
+      url: training
       weight: 10
     - name: speaking
       url: speaking
       weight: 10
+    - name: about
+      url: about
+      weight: 20
     - name: search
       url: search/
       weight: 10
