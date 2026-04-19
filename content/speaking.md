@@ -15,11 +15,9 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ### Reverse GitOps - KubeCon Co-located Event *(March 2026)*
 
-[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · [Slides](https://github.com/reverse-gitops/talks)
+[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · [Slides](https://github.com/reverse-gitops/talks) · [Recording](https://www.youtube.com/watch?v=X3sUAsTPbDM)
 
 GitOps is well understood in one direction: desired state in Git, applied to a cluster. But what happens when you need it to work in reverse? When the cluster (or an operator) needs to write state *back* to Git? I introduced the concept of **Reverse GitOps** and walked through why it matters, where the current tooling falls short, and what a proper implementation looks like.
-
-Recording not (yet!) available.
 
 ### Bringing Pull Requests to Life with GitOps - dotned Saturday *(May 2023)*
 
