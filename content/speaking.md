@@ -13,11 +13,30 @@ I believe in working in the open. Everything is a file, and the more I work with
 
 My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudijs/).
 
-### Reverse GitOps - KubeCon Co-located Event *(March 2026)*
+## Upcoming
 
-[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · [Slides](https://github.com/reverse-gitops/talks) · [Recording](https://www.youtube.com/watch?v=X3sUAsTPbDM)
+### CozySummit 2026 - CNCF *(26 May 2026)*
+
+[CozySummit event](https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-cozysummit-virtual-2026/)
+
+Cozystack exposes platform services as Kubernetes API resources: Postgres, Redis, Bucket, Kubernetes. Users interact via kubectl, a dashboard, or even AI agents through MCP. But who is making all these changes, and why? Git seems far away. What if every platform change automatically appeared as clean YAML in Git? A silent layer that turns API activity into a durable, readable history of infrastructure intent. The immediate win is auditability: instead of digging through logs, teams get versioned history they can inspect, diff, and share. Think of it as reverse GitOps: instead of Git driving the platform, the platform writes its intent back to Git.
+
+### Who Tests the Configuration? - TestNet Spring Event *(6 May 2026)*
+
+[TestNet event](https://www.testnet.org/evenement/entry/29924/?evenement=voorjaarsevenement-2026) *(Dutch)*
+
+Much of what impacts production isn't code but configuration: business rules, feature flags, content, rate limits, deployment settings, database connection details. Because configuration is so broad and scattered, it's often unclear what falls under it, who can change it, and how to properly test those changes. This session shows why that's a quality problem and how to make configuration changes visible, reviewable, and testable before production, using pull requests to spin up temporary environments for impact testing.
+
+## Given
+
+### Reverse GitOps - KubeCon Co-located Event *(23 March 2026)*
+
+[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · Slides: [PDF](https://raw.githubusercontent.com/reverse-gitops/talks/refs/heads/main/dist/the-gitops-paradox.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Recording](https://www.youtube.com/watch?v=X3sUAsTPbDM)
+
 
 GitOps is well understood in one direction: desired state in Git, applied to a cluster. But what happens when you need it to work in reverse? When the cluster (or an operator) needs to write state *back* to Git? I introduced the concept of **Reverse GitOps** and walked through why it matters, where the current tooling falls short, and what a proper implementation looks like.
+
+![Platform Engineering Day EU 2026 Speaker](/images/platform-engineering-day-eu-2026-speaker-badge.png)
 
 ### Bringing Pull Requests to Life with GitOps - dotned Saturday *(May 2023)*
 
