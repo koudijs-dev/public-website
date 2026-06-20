@@ -1,0 +1,61 @@
+name: preview-image
+
+on:
+  push:
+    branches: ['**']            # every branch, before a PR is opened
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write               # push to ghcr.io
+
+env:
+  IMAGE: ghcr.io/${{ github.repository }}   # -> ghcr.io/koudijs-dev/public-website
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Same Hugo as production (publish-stuff.yml): extended 0.163.3.
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.163.3'
+          extended: true
+
+      # --baseURL "/" emits root-relative links (/posts/…) that resolve on ANY
+      # preview host (pr<N>.preview.koudijs.dev) served at the root, without baking
+      # the per-PR hostname into the build.
+      - name: Build site
+        run: hugo --minify --baseURL "/"
+        env:
+          HUGO_PARAMS_gitsha: ${{ github.sha }}   # version footer (links to the commit)
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Image tags
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=ref,event=branch       # :<branch>     (human-friendly, moves)
+            type=sha,format=short       # :sha-<short>  (immutable — what previews pin to)
+
+      - name: Build & push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

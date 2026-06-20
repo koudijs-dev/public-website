@@ -1,3 +1,13 @@
 {{- /* Footer custom content area start */ -}}
-{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
+{{- /* Subtle version footer: 7-char build SHA linking to the commit on GitHub.   */ -}}
+{{- /* The SHA is injected at build time via the HUGO_PARAMS_gitsha env var        */ -}}
+{{- /* (set to github.sha in both publish-stuff.yml and preview-image.yml), so it  */ -}}
+{{- /* works identically on the gh-pages build and the preview image.             */ -}}
+{{- with site.Params.gitsha }}
+{{- $repo := site.Params.gitRepo | default "https://github.com/koudijs-dev/public-website" }}
+<div class="version-footer" style="text-align:center;font-size:.7rem;opacity:.5;padding:.25rem 0 1rem;">
+    <a href="{{ $repo }}/commit/{{ . }}" rel="noopener noreferrer" target="_blank"
+       title="View this build's commit on GitHub" style="color:inherit;">{{ slicestr . 0 7 }}</a>
+</div>
+{{- end }}
 {{- /* Footer custom content area end */ -}}

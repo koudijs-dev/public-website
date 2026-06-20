@@ -10,6 +10,7 @@ params:
   description: "Consultant, trainer, and speaker on software delivery, platform engineering, Kubernetes, GitOps, and AI in engineering."
   keywords: [Consulting, Training, Platform Engineering, Kubernetes, GitOps, Software Delivery, AI]
   author: Simon Koudijs
+  gitRepo: https://github.com/koudijs-dev/public-website
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false

@@ -21,11 +21,13 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.148.1'
+          hugo-version: '0.163.3'
           extended: true
 
       - name: Build
         run: hugo --minify
+        env:
+          HUGO_PARAMS_gitsha: ${{ github.sha }}   # version footer (links to the commit)
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
