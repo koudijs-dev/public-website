@@ -52,6 +52,8 @@ jobs:
             type=ref,event=branch       # :<branch>     (human-friendly, moves)
             type=sha,format=short       # :sha-<short>  (immutable — what previews pin to)
 
+      # Push first, so the preview stays available to inspect even when the
+      # blocking routing test below fails.
       - name: Build & push
         uses: docker/build-push-action@v6
         with:
@@ -60,24 +62,11 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-  # Non-blocking: reports routing health on the commit/PR but does NOT gate the
-  # push above (no `needs:`), so the two jobs run independently in parallel.
-  routing-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.163.3'
-          extended: true
-
-      - name: Build site
-        run: hugo --minify --baseURL "/"
-
-      - name: Build preview image
-        run: docker build -t preview-image:test .
-
+      # Blocking gate: pull the image we just pushed and verify /speaking and
+      # /speaking/ both serve a real page — no redirect, no :8080 leak — and that
+      # unknown paths 404. A failure here fails the job (and the commit/PR check),
+      # but the image was already pushed above so the preview is still inspectable.
       - name: Routing tests (/speaking and /speaking/ must both serve a real page)
-        run: IMAGE=preview-image:test ./test/routing.sh
+        run: |
+          IMAGE="$(printf '%s\n' "${{ steps.meta.outputs.tags }}" | head -n1)" \
+            ./test/routing.sh
