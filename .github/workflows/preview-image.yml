@@ -33,6 +33,8 @@ jobs:
       # the per-PR hostname into the build.
       - name: Build site
         run: hugo --minify --baseURL "/"
+        env:
+          HUGO_PARAMS_gitsha: ${{ github.sha }}   # version footer (links to the commit)
 
       - name: Log in to GHCR
         uses: docker/login-action@v3

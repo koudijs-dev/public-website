@@ -26,6 +26,8 @@ jobs:
 
       - name: Build
         run: hugo --minify
+        env:
+          HUGO_PARAMS_gitsha: ${{ github.sha }}   # version footer (links to the commit)
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
