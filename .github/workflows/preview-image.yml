@@ -59,3 +59,25 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  # Non-blocking: reports routing health on the commit/PR but does NOT gate the
+  # push above (no `needs:`), so the two jobs run independently in parallel.
+  routing-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.163.3'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify --baseURL "/"
+
+      - name: Build preview image
+        run: docker build -t preview-image:test .
+
+      - name: Routing tests (/speaking and /speaking/ must both serve a real page)
+        run: IMAGE=preview-image:test ./test/routing.sh
