@@ -1,11 +1,6 @@
-# koudijs.dev
-This is the official website for myself and my company.
+Website for my company
 
 I have used this [open theme to get started](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation).
-
-# Nice ideas
-
-[Add your books](https://wicki.io/posts/2021-04-goodreads-workflow-for-github-actions/) to your GH profile
 
 # Getting started
 
