@@ -23,3 +23,25 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     height: 100%;
     border: 0;
 }
+
+/*
+Mobile nav: by default the menu is a single nowrap, horizontally-scrolling row
+with text-sized tap targets crammed together, which is hard to tap on a phone.
+Let it wrap and give each link a proper padded tap target instead.
+*/
+@media screen and (max-width: 768px) {
+    #menu {
+        flex-wrap: wrap;
+        white-space: normal;
+        overflow-x: visible;
+        row-gap: 4px;
+    }
+
+    .nav a {
+        line-height: 1.4;
+    }
+
+    #menu a {
+        padding: 10px 12px;
+    }
+}
