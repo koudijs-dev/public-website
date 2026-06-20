@@ -85,18 +85,25 @@ assert_served_directly() {
 
 # assert_no_port_leak PATH : no Location header points at :8080 or an absolute http origin
 assert_no_port_leak() {
-    local headers
+    local headers loc
     headers=$(curl -s -D - -o /dev/null "$base$1")
-    if printf '%s' "$headers" | grep -iqE '^location:.*(:8080|http://)'; then
-        bad "$1 leaks internal origin in Location header"
+    loc=$(printf '%s' "$headers" | grep -i '^location:' || true)
+    if [[ "$loc" == *:8080* || "$loc" == *"http://"* ]]; then
+        bad "$1 leaks internal origin in Location header ($loc)"
     else
         pass "$1 no :8080 leak"
     fi
 }
 
 # assert_body_contains PATH NEEDLE
+# Capture the body first, then match in-shell. Do NOT pipe curl into `grep -q`:
+# under `pipefail`, grep exits on first match and SIGPIPEs the still-writing
+# curl, which then reports the whole pipeline as failed — a race that flakes on
+# large bodies (passes when curl happens to finish first, fails otherwise).
 assert_body_contains() {
-    if curl -s "$base$1" | grep -qF "$2"; then
+    local body
+    body=$(curl -s "$base$1")
+    if [[ "$body" == *"$2"* ]]; then
         pass "$1 body contains '$2'"
     else
         bad "$1 body missing '$2'"
