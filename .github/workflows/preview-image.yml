@@ -52,6 +52,8 @@ jobs:
             type=ref,event=branch       # :<branch>     (human-friendly, moves)
             type=sha,format=short       # :sha-<short>  (immutable — what previews pin to)
 
+      # Push first, so the preview stays available to inspect even when the
+      # blocking routing test below fails.
       - name: Build & push
         uses: docker/build-push-action@v6
         with:
@@ -59,3 +61,12 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      # Blocking gate: pull the image we just pushed and verify /speaking and
+      # /speaking/ both serve a real page — no redirect, no :8080 leak — and that
+      # unknown paths 404. A failure here fails the job (and the commit/PR check),
+      # but the image was already pushed above so the preview is still inspectable.
+      - name: Routing tests (/speaking and /speaking/ must both serve a real page)
+        run: |
+          IMAGE="$(printf '%s\n' "${{ steps.meta.outputs.tags }}" | head -n1)" \
+            ./test/routing.sh
