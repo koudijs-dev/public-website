@@ -1,0 +1,21 @@
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates
+#
+# Only two ecosystems exist in this repo: the preview Dockerfile and the GitHub
+# Actions workflows. The Hugo theme (PaperMod) is vendored into assets/ and
+# layouts/ rather than pulled via npm/go modules or a submodule, so there is no
+# Hugo dependency manifest for Dependabot to track.
+version: 2
+updates:
+  # Base image in the preview Dockerfile (nginx-unprivileged). Bumps are
+  # exercised by the routing test before they can merge.
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Actions used across the workflows: actions/checkout, peaceiris/actions-hugo,
+  # peaceiris/actions-gh-pages, and the docker/* actions.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
