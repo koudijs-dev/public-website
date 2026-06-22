@@ -3,7 +3,7 @@
 # The build step (preview-image.yml) runs `hugo` before `docker build`, producing ./public.
 # Pinned by digest so Dependabot proposes (and the routing test gates) base
 # image bumps; the :alpine tag is kept for readability.
-FROM nginxinc/nginx-unprivileged:alpine@sha256:26b5d4920434bc4d8c17a68201488cf4b3d2391f0d25305cdfe66ccdc6d18aa4
+FROM nginxinc/nginx-unprivileged:alpine@sha256:054e14f543eb688809d59ec2ad1644d1a61678e247c87a318ad605977eb37eaf
 # Serve Hugo's pretty URLs for both /path and /path/ as a direct 200 (no
 # redirect), so the container's internal :8080 never leaks into a Location
 # header behind the preview reverse proxy. See nginx/default.conf.
