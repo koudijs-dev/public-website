@@ -55,7 +55,7 @@ jobs:
       # Push first, so the preview stays available to inspect even when the
       # blocking routing test below fails.
       - name: Build & push
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
