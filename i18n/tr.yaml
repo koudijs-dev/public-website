@@ -6,8 +6,8 @@
 
 - id: read_time
   translation:
-    one : "1 dk"
-    other: "{{ .Count }} dk"
+    one : "1 dakika"
+    other: "{{ .Count }} dakika"
 
 - id: toc
   translation: "İçindekiler"
