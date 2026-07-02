@@ -118,3 +118,17 @@ Off course only for the PR enviromment. On main it should just do the actual cur
 ```
 
 npx playwright show-trace path/to/trace.zip
+
+
+---
+
+Well it's now failing: and it's pretty clear why. It has used hard coded urls!
+
+
+Let's throw in another prompt:
+
+```
+Can you please use GH to check the latest failing build?
+
+I guess that the base url is not always used in all checks. Can you make the fixed needed?
+```

@@ -65,7 +65,8 @@ test.describe('navigation', () => {
     await page.goto('/about');
     await page.getByRole('navigation').getByRole('link', { name: 'koudijs.dev' }).click();
 
-    await expect(page).toHaveURL('https://koudijs.dev/');
+    // Relative path resolves against baseURL, so this works for previews too.
+    await expect(page).toHaveURL('/');
     await expect(page.getByRole('heading', { level: 1, name: 'koudijs.dev' })).toBeVisible();
   });
 });
