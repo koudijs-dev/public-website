@@ -99,3 +99,22 @@ npx playwright show-trace
 
 
 Let's see if we can get this to run inside a pull request as well
+
+
+---
+
+Now you see that it's working in the PR build: but offcourse targeting the wrong branch:
+
+```
+Can you do two things for @.github/workflows/playwright.yml 
+
+I would like the full tracing to be enabled always: so that I can show that the zip file is a full trace
+
+I have a very cool mechanism that this is running inside pull request: every pull request gets its own full ephermal environmet at for example https://pr20.preview.koudijs.dev/ -> where 20 is the pr number. It's publicly avaialble within one minute.
+
+Can you include a little website to query the url (after it downloaded all playwright stuff!) and adjust the base url?
+
+Off course only for the PR enviromment. On main it should just do the actual current website
+```
+
+npx playwright show-trace path/to/trace.zip

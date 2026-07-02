@@ -25,11 +25,13 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://koudijs.dev',
+    /* Base URL to use in actions like `await page.goto('')`.
+       Overridable via PLAYWRIGHT_BASE_URL (e.g. per-PR preview environments). */
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'https://koudijs.dev',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    /* Always collect a full trace so the artifact zip is a complete trace.
+       See https://playwright.dev/docs/trace-viewer */
+    trace: 'on',
   },
 
   /* Configure projects for major browsers */
