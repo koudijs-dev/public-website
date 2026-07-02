@@ -87,21 +87,22 @@ test.describe('theme toggle', () => {
 
 test.describe('search', () => {
   test('returns matching posts as you type', async ({ page }) => {
-    // fastsearch.js builds the Fuse index from /index.json on window.onload,
-    // and keystrokes only search once that index exists. Wait for it before
-    // typing, otherwise webkit races the keystrokes and no search ever runs.
-    const indexLoaded = page.waitForResponse((r) => r.url().endsWith('/index.json') && r.ok());
     await page.goto('/search/');
-    await indexLoaded;
 
     const box = page.getByRole('searchbox', { name: 'search' });
-    // PaperMod's search reacts to keystrokes (keyup), so type character by
-    // character rather than using fill(), which only sets the value.
-    await box.pressSequentially('git');
-
     // Results are rendered into #searchResults by the client-side (fuse.js) index.
     const results = page.locator('#searchResults li');
-    await expect(results.first()).toBeVisible();
+
+    // fastsearch.js builds the Fuse index asynchronously (XHR on window.onload)
+    // and only runs a search on keyup. On webkit the index can still be building
+    // when the keystrokes fire, so those keyups no-op and nothing re-triggers a
+    // search. Retype until results appear — once the index is ready, they do.
+    await expect(async () => {
+      await box.fill('');
+      await box.pressSequentially('git');
+      await expect(results.first()).toBeVisible({ timeout: 2000 });
+    }).toPass({ timeout: 15000 });
+
     expect(await results.count()).toBeGreaterThan(0);
   });
 });
