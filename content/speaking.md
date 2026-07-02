@@ -3,7 +3,7 @@ title: "Speaking"
 weight: 10
 ---
 
-I'm a programmer who got curious about infrastructure, and an infrastructure person who never stopped thinking like a programmer. Ignoring the line between "software" and "ops" is where my best ideas come from.
+I'm silly  programmer who got curious about infrastructure, and an infrastructure person who never stopped thinking like a programmer. Ignoring the line between "software" and "ops" is where my best ideas come from.
 
 I believe in working in the open. Everything is a file, and the more I work with AI, the more that turns out to be a surprisingly strong foundation to build on. Git fits naturally into that: history is preserved, anything can be diffed, anyone can look. That same thinking carries into how I present. My slides are [written in code](/posts/slides-as-code/), version-controlled and publicly available, with the source linked for each talk below.
 
