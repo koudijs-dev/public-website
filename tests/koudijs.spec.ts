@@ -87,7 +87,12 @@ test.describe('theme toggle', () => {
 
 test.describe('search', () => {
   test('returns matching posts as you type', async ({ page }) => {
+    // fastsearch.js builds the Fuse index from /index.json on window.onload,
+    // and keystrokes only search once that index exists. Wait for it before
+    // typing, otherwise webkit races the keystrokes and no search ever runs.
+    const indexLoaded = page.waitForResponse((r) => r.url().endsWith('/index.json') && r.ok());
     await page.goto('/search/');
+    await indexLoaded;
 
     const box = page.getByRole('searchbox', { name: 'search' });
     // PaperMod's search reacts to keystrokes (keyup), so type character by
