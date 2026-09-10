@@ -3,9 +3,6 @@ name: preview-image
 on:
   push:
     branches: ['**']            # every branch, before a PR is opened
-    paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
   workflow_dispatch:
 
 permissions:
