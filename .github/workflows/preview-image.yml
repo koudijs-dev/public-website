@@ -49,8 +49,10 @@ jobs:
         with:
           images: ${{ env.IMAGE }}
           tags: |
-            type=ref,event=branch       # :<branch>     (human-friendly, moves)
-            type=sha,format=short       # :sha-<short>  (immutable — what previews pin to)
+            # :<branch>     (human-friendly, moves)
+            type=ref,event=branch
+            # :sha-<short>  (immutable — what previews pin to)
+            type=sha,format=short
 
       # Push first, so the preview stays available to inspect even when the
       # blocking routing test below fails.
