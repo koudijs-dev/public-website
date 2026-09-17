@@ -15,16 +15,6 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ## Upcoming
 
-### GitOps Needs an API - Swiss Cloud Native Day 2026 *(17 September 2026)*
-
-[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭
-
-GitOps works well. Well enough that high-level business intent ends up in Git too: customer tenants, feature rollouts, access policies. The hard part is not storing it there. The hard part is expecting business stakeholders or customers to manage it through pull requests and raw YAML.
-
-Reverse GitOps is an API-first pattern for exactly this problem. A typed Kubernetes API in front of your repo accepts structured intent through CRDs, without giving callers direct access to Git. A controller turns that intent into YAML files and commits them to Git. From there you keep the GitOps workflow you already trust: review, policy checks, CI, and a full audit trail.
-
-I'll demo this live using the open-source [`gitops-reverser`](https://github.com/ConfigButler/gitops-reverser) operator, and close with an honest checklist: where this pattern shines (low-churn, high-impact configuration that needs review and audit), and where it is the wrong tool (high-frequency writes, tight latency requirements, or anything that belongs in a normal database).
-
 ### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
 
 [Session page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
@@ -38,6 +28,16 @@ Configuration is often some of the most critical logic in a system, yet many tea
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
 
 ## Given
+
+### GitOps Needs an API - Swiss Cloud Native Day 2026 *(17 September 2026)*
+
+[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/gitops-needs-an-api.pdf), [Repo](https://github.com/reverse-gitops/talks)
+
+GitOps works well. Well enough that high-level business intent ends up in Git too: customer tenants, feature rollouts, access policies. The hard part is not storing it there. The hard part is expecting business stakeholders or customers to manage it through pull requests and raw YAML.
+
+Reverse GitOps is an API-first pattern for exactly this problem. A typed Kubernetes API in front of your repo accepts structured intent through CRDs, without giving callers direct access to Git. A controller turns that intent into YAML files and commits them to Git. From there you keep the GitOps workflow you already trust: review, policy checks, CI, and a full audit trail.
+
+I demoed this live using the open-source [`gitops-reverser`](https://github.com/ConfigButler/gitops-reverser) operator, and closed with an honest checklist: where this pattern shines (low-churn, high-impact configuration that needs review and audit), and where it is the wrong tool (high-frequency writes, tight latency requirements, or anything that belongs in a normal database).
 
 ### What If Every Cozystack Change Became a Commit? - CozySummit Virtual 2026 *(26 May 2026)*
 
