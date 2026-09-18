@@ -1,6 +1,9 @@
 baseURL: https://koudijs.dev/
 languageCode: en-us
 title: koudijs.dev
+# Renders layouts/robots.txt. Without this Hugo publishes no robots.txt at all,
+# which left the edge free to answer for us.
+enableRobotsTXT: true
 pagination:
   pagerSize: 5
 
@@ -54,11 +57,21 @@ params:
       url: https://simonkoudijs.substack.com/
 
 
+# llms.txt is generated from the site's own pages (see
+# layouts/_default/index.llms.txt), so it cannot drift from what is published.
+outputFormats:
+  LLMS:
+    mediaType: text/plain
+    baseName: llms
+    isPlainText: true
+    notAlternative: true
+
 outputs:
   home:
   - HTML
   - RSS
   - JSON
+  - LLMS
 
 menu:
   main:

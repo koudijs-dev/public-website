@@ -1,0 +1,34 @@
+{{- /* llms.txt — a plain-text summary of this site for language models and agents.
+       Pages and posts are ranged over, so this file follows the content instead of
+       being maintained by hand. Spec: https://llmstxt.org/ */ -}}
+{{- $trim := "\\s+" -}}
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+Simon Koudijs is a consultant, trainer, and speaker based in Amersfoort, Netherlands,
+trading as Koudijs IT (KvK 97788708). The work spans software delivery, engineering
+workflows and CI/CD, platform engineering, Kubernetes, GitOps, and the practical use of
+AI in engineering — with a bias towards what teams can actually apply over what sounds
+impressive. He is also the founder of ConfigButler (https://configbutler.ai) and the
+author of the Reverse GitOps manifesto (https://reversegitops.dev).
+
+Available for consulting, in-house and public training, and conference talks. To make
+contact, book a slot directly: https://calendar.app.google/c2jMcQgREVgbKEj18
+
+## Pages
+{{ range $p := (where (where .Site.RegularPages "Section" "") "Layout" "!=" "search") -}}
+- [{{ $p.Title }}]({{ $p.Permalink }}): {{ $p.Summary | plainify | replaceRE $trim " " | htmlUnescape | truncate 240 }}
+{{ end }}
+## Posts
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}) — {{ .Date.Format "2 January 2006" }}{{ with .Params.tags }}, tagged {{ delimit . ", " }}{{ end }}: {{ .Summary | plainify | replaceRE $trim " " | htmlUnescape | truncate 240 }}
+{{ end }}
+## Notes for crawlers and agents
+
+- Crawling, indexing, quoting, and training on this content are all permitted. See {{ "robots.txt" | absURL }} for the Content Signals.
+- Machine-readable index of this site: {{ "sitemap.xml" | absURL }}
+- Full-text search index used by the site's own search page: {{ "index.json" | absURL }}
+- RSS feed: {{ "index.xml" | absURL }}
+- Capability manifest: {{ "/.well-known/ai-catalog.json" | absURL }}
+- There is no API to call on this domain; the site is a personal site and blog. Talk slides are published as code at https://github.com/reverse-gitops/talks
