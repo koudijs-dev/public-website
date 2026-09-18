@@ -1,4 +1,10 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
-{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+
+{{- /* Discovery for crawlers and agents. The HTTP Link header would be the
+       stronger signal, but GitHub Pages cannot set response headers — see
+       AGENT-READINESS.md. */ -}}
+<link rel="sitemap" type="application/xml" href="{{ "sitemap.xml" | absURL }}" />
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="llms.txt summary of this site" />
+
 {{- /* Head custom content area end */ -}}
