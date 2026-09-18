@@ -1,0 +1,32 @@
+# koudijs.dev
+
+> Consultant, trainer, and speaker on software delivery, platform engineering, Kubernetes, GitOps, and AI in engineering.
+
+Simon Koudijs is a consultant, trainer, and speaker based in Amersfoort, Netherlands,
+trading as Koudijs IT (KvK 97788708). The work spans software delivery, engineering
+workflows and CI/CD, platform engineering, Kubernetes, GitOps, and the practical use of
+AI in engineering — with a bias towards what teams can actually apply over what sounds
+impressive. He is also the founder of ConfigButler (https://configbutler.ai) and the
+author of the Reverse GitOps manifesto (https://reversegitops.dev).
+
+Available for consulting, in-house and public training, and conference talks. To make
+contact, book a slot directly: https://calendar.app.google/c2jMcQgREVgbKEj18
+
+## Pages
+- [About](https://koudijs.dev/about/): I help teams improve software delivery. From engineering workflows and CI/CD to platform engineering, Kubernetes, GitOps, and AI. Through koudijs.dev I work as a consultant, trainer, and speaker for organisations that want practical help, …
+- [Speaking](https://koudijs.dev/speaking/): I’m a programmer who got curious about infrastructure, and an infrastructure person who never stopped thinking like a programmer. Ignoring the line between “software” and “ops” is where my best ideas come from. I believe in working in the …
+- [Training](https://koudijs.dev/training/): I turn complex technical topics into something teams can understand and act on. My training is practical and grounded in real-world delivery work. No slides-only theory, but the kind of knowledge that changes how a team actually works. …
+
+## Posts
+- [Why I build my slides in code](https://koudijs.dev/posts/slides-as-code/) — 1 April 2026, tagged git, speaking, slidev, reveal.js: I don’t use PowerPoint. Not because I think it’s bad, but because I kept feeling like I was fighting the tool rather than thinking about what I wanted to say. Git is the closest thing I have to a personal philosophy. Everything is a file. …
+- [Ingress API key](https://koudijs.dev/posts/ingress-api-key/) — 15 February 2022, tagged kubernetes: Let’s say you just wanted to have a simple API-key for your nginx ingress. The if structures in nginx configs are an interesting way to do this. There might be more effecient ways to do this, but for now this will do. Example …
+- [Azure functions auth in k8s](https://koudijs.dev/posts/azure-function-auth-in-k8s/) — 11 February 2022, tagged kubernetes, az-functions: On this docker hub page you can find all functions containers. This will allow you to run your Azure Functions inside kubernetes. But how do you set this up? What things are not included? Functions in Azure itself Azure functions make it …
+
+## Notes for crawlers and agents
+
+- Crawling, indexing, quoting, and training on this content are all permitted. See https://koudijs.dev/robots.txt for the Content Signals.
+- Machine-readable index of this site: https://koudijs.dev/sitemap.xml
+- Full-text search index used by the site's own search page: https://koudijs.dev/index.json
+- RSS feed: https://koudijs.dev/index.xml
+- Capability manifest: https://koudijs.dev/.well-known/ai-catalog.json
+- There is no API to call on this domain; the site is a personal site and blog. Talk slides are published as code at https://github.com/reverse-gitops/talks

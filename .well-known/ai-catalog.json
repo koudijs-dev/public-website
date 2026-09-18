@@ -1,0 +1,120 @@
+{
+  "specVersion": "0.1",
+  "host": {
+    "domain": "koudijs.dev",
+    "name": "koudijs.dev — Simon Koudijs",
+    "description": "The personal site of Simon Koudijs, consultant, trainer, and speaker on software delivery, engineering workflows and CI/CD, platform engineering, Kubernetes, GitOps, and the practical use of AI in engineering. Trading as Koudijs IT, based in Amersfoort, Netherlands.",
+    "contact": "https://koudijs.dev/about/"
+  },
+  "entries": [
+    {
+      "id": "urn:air:koudijs.dev:site:overview",
+      "displayName": "Simon Koudijs — consultant, trainer, and speaker",
+      "description": "The front page: who Simon Koudijs is and the three ways he works with organisations — consulting on software delivery, training, and conference speaking.",
+      "type": "text/html",
+      "url": "https://koudijs.dev/",
+      "representativeQueries": [
+        "Who is Simon Koudijs?",
+        "platform engineering consultant Netherlands",
+        "Kubernetes and GitOps consultant Amersfoort",
+        "software delivery consultant and trainer"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:site:about",
+      "displayName": "About Simon Koudijs and how to make contact",
+      "description": "Background on the consulting, training, and speaking work, the company details for Koudijs IT (KvK 97788708, Amersfoort, Netherlands), the connection to ConfigButler, and the booking link for a call.",
+      "type": "text/html",
+      "url": "https://koudijs.dev/about/",
+      "representativeQueries": [
+        "contact Simon Koudijs",
+        "book a call with Simon Koudijs",
+        "Koudijs IT company details KvK",
+        "hire a platform engineering consultant"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:site:training",
+      "displayName": "Training courses and in-house sessions",
+      "description": "Public courses run with ICT Improve — Delivering Modern Cloud-Native Software, and Applied AI for Test Automation with Playwright — plus in-house training tailored to a team's own context.",
+      "type": "text/html",
+      "url": "https://koudijs.dev/training/",
+      "representativeQueries": [
+        "Kubernetes training Netherlands",
+        "cloud-native software delivery course",
+        "AI for test automation with Playwright training",
+        "in-house platform engineering training"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:site:speaking",
+      "displayName": "Conference talks, upcoming and given",
+      "description": "The speaking page: upcoming and past conference talks with abstracts, venues and dates, and links to the slides, which are written in code and version-controlled rather than built in PowerPoint.",
+      "type": "text/html",
+      "url": "https://koudijs.dev/speaking/",
+      "representativeQueries": [
+        "Simon Koudijs conference talks",
+        "speaker on GitOps and platform engineering",
+        "talks about the Kubernetes API as a configuration backend",
+        "book a speaker on software delivery"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:site:posts",
+      "displayName": "Blog posts",
+      "description": "Writing on Kubernetes, GitOps, delivery practice, and working in the open — including why the slides for every talk are built as code.",
+      "type": "text/html",
+      "url": "https://koudijs.dev/posts/",
+      "representativeQueries": [
+        "Simon Koudijs blog",
+        "articles about Kubernetes and GitOps practice",
+        "why build conference slides as code"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:index:llms-txt",
+      "displayName": "llms.txt summary of koudijs.dev",
+      "description": "A plain-text summary of the site, its pages, and every published post, generated from the site's own content so it cannot drift.",
+      "type": "text/plain",
+      "url": "https://koudijs.dev/llms.txt",
+      "representativeQueries": [
+        "koudijs.dev llms.txt",
+        "plain text summary of koudijs.dev"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:index:search",
+      "displayName": "Full-text search index",
+      "description": "The JSON index behind the site's own search page: title, permalink, summary, and full content for every page. The most direct way to read the whole site in one request.",
+      "type": "application/json",
+      "url": "https://koudijs.dev/index.json",
+      "representativeQueries": [
+        "full text of every page on koudijs.dev",
+        "koudijs.dev search index",
+        "machine-readable content of koudijs.dev"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:index:feed",
+      "displayName": "RSS feed",
+      "description": "The RSS feed for new posts on koudijs.dev.",
+      "type": "application/rss+xml",
+      "url": "https://koudijs.dev/index.xml",
+      "representativeQueries": [
+        "koudijs.dev RSS feed",
+        "subscribe to Simon Koudijs posts"
+      ]
+    },
+    {
+      "id": "urn:air:koudijs.dev:index:sitemap",
+      "displayName": "koudijs.dev sitemap",
+      "description": "The canonical list of crawlable URLs on koudijs.dev.",
+      "type": "application/xml",
+      "url": "https://koudijs.dev/sitemap.xml",
+      "representativeQueries": [
+        "all pages on koudijs.dev",
+        "koudijs.dev sitemap"
+      ]
+    }
+  ]
+}
