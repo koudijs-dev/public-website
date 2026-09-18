@@ -33,13 +33,13 @@ This talk starts with application settings that broke production. Each one led t
 
 ### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
 
-[Øredev 2026](https://oredev.org/) · Malmö 🇸🇪
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
 
 Configuration is often some of the most critical logic in a system, yet many teams manage it with far less discipline than code. It lives in databases, gets edited through admin screens, bypasses review, mixes awkwardly with secrets, and moves across environments with weak packaging boundaries. This talk argues configuration should be treated as a delivery problem, not just a storage problem: capture validated intent through an API, then turn it into configuration that is tested, packaged, versioned, signed, and promoted through environments as controlled artifacts.
 
 ### (Ab)using the Kubernetes API as a Configuration Backend - Øredev 2026 *(6 November 2026)*
 
-[Øredev 2026](https://oredev.org/) · Malmö 🇸🇪
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
 
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
 
