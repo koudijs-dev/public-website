@@ -45,7 +45,7 @@ Configuration-heavy products keep reinventing the same backend machinery: typed 
 
 ### What If All Configuration Could Have a Kubernetes-Style API? - DDC 2026 *(26 November 2026)*
 
-[DDC 2026 programme](https://www.developer-world.com/ddc-programm) · Half-day workshop · Hyatt Regency, Cologne 🇩🇪
+[DDC 2026 programme](https://www.developer-world.com/ddc-programm) · Half-day workshop · Hyatt Regency, Cologne (Köln) 🇩🇪
 
 The best REST API I have ever seen is Kubernetes, not because it runs containers, but because the API machinery underneath it is flexible enough to model many kinds of intent: typed resources, schema validation, optimistic concurrency, watches, status, events, audit, authentication, and resource-level authorization. Pods and deployments are just the famous examples.
 
