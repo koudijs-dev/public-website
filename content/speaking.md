@@ -15,17 +15,41 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ## Upcoming
 
+### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
+
+[Frontmania 2026](https://frontmania.com/) · Jaarbeurs, Utrecht 🇳🇱
+
+Kubernetes is famous for running containers, but its API model is the interesting part: flexible resources, desired state, live updates through watches, validation, and advanced access control. Platform engineers use these ideas every day. Frontenders usually only get the boring REST endpoint at the end. Isn't that a missed opportunity?
+
+I've built an open-source coffee-ordering demo where the whole audience gets admin rights: grab your phone and configure my demo, and let's see how live updates are not only cool but also useful for handling conflicts. This is not a talk about exposing your production infrastructure to the public internet. It is about running a small, dedicated Kubernetes API server as a product backend. Kubernetes may not become your best friend forever, but could it become your Backend for Frontend?
+
+### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
+
+[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱
+
+Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behaviour just as much as new code.
+
+This talk starts with application settings that broke production. Each one led to the same uncomfortable questions: who made the change, where was it validated, and how do we stop the next one? Could important product configuration live in a separate Git repo, reviewed and promoted like code, while the people who change it never see Git and just use a nice settings screen? I'll show the design of the open-source tool I built to explore this and where it gets hard (conflicts, concurrency, and putting real authors on Git commits), then demo it live with the whole audience as admins.
+
 ### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
 
-[Session page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
 
 Configuration is often some of the most critical logic in a system, yet many teams manage it with far less discipline than code. It lives in databases, gets edited through admin screens, bypasses review, mixes awkwardly with secrets, and moves across environments with weak packaging boundaries. This talk argues configuration should be treated as a delivery problem, not just a storage problem: capture validated intent through an API, then turn it into configuration that is tested, packaged, versioned, signed, and promoted through environments as controlled artifacts.
 
 ### (Ab)using the Kubernetes API as a Configuration Backend - Øredev 2026 *(6 November 2026)*
 
-[Session page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
 
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
+
+### What If All Configuration Could Have a Kubernetes-Style API? - DDC 2026 *(26 November 2026)*
+
+[DDC 2026 programme](https://www.developer-world.com/ddc-programm) · Half-day workshop · Hyatt Regency, Cologne (Köln) 🇩🇪
+
+The best REST API I have ever seen is Kubernetes, not because it runs containers, but because the API machinery underneath it is flexible enough to model many kinds of intent: typed resources, schema validation, optimistic concurrency, watches, status, events, audit, authentication, and resource-level authorization. Pods and deployments are just the famous examples.
+
+Application configuration is our practical case. We inspect a configurable coffee-ordering app and improve its model together, deciding how to split settings across one or more resource types, how to model the one-to-many relationships, how to define authorization, and the harder question of what happens to existing values when the model itself changes. You get hands-on in your own devcontainer, working at two levels: first changing the configuration, then changing the definition itself. Feeling the difference between changing config and evolving its schema is the core of the workshop. You do not need to be a Kubernetes operator, or even plan to use Kubernetes.
 
 ## Given
 
