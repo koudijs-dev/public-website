@@ -15,14 +15,6 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ## Upcoming
 
-### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
-
-[Frontmania 2026](https://frontmania.com/) · Jaarbeurs, Utrecht 🇳🇱
-
-Kubernetes is famous for running containers, but its API model is the interesting part: flexible resources, desired state, live updates through watches, validation, and advanced access control. Platform engineers use these ideas every day. Frontenders usually only get the boring REST endpoint at the end. Isn't that a missed opportunity?
-
-I've built an open-source coffee-ordering demo where the whole audience gets admin rights: grab your phone and configure my demo, and let's see how live updates are not only cool but also useful for handling conflicts. This is not a talk about exposing your production infrastructure to the public internet. It is about running a small, dedicated Kubernetes API server as a product backend. Kubernetes may not become your best friend forever, but could it become your Backend for Frontend?
-
 ### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
 
 [Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱
@@ -43,19 +35,21 @@ Configuration is often some of the most critical logic in a system, yet many tea
 
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
 
-### What If All Configuration Could Have a Kubernetes-Style API? - DDC 2026 *(26 November 2026)*
-
-[DDC 2026 programme](https://www.developer-world.com/ddc-programm) · Half-day workshop · Hyatt Regency, Cologne (Köln) 🇩🇪
-
-The best REST API I have ever seen is Kubernetes, not because it runs containers, but because the API machinery underneath it is flexible enough to model many kinds of intent: typed resources, schema validation, optimistic concurrency, watches, status, events, audit, authentication, and resource-level authorization. Pods and deployments are just the famous examples.
-
-Application configuration is our practical case. We inspect a configurable coffee-ordering app and improve its model together, deciding how to split settings across one or more resource types, how to model the one-to-many relationships, how to define authorization, and the harder question of what happens to existing values when the model itself changes. You get hands-on in your own devcontainer, working at two levels: first changing the configuration, then changing the definition itself. Feeling the difference between changing config and evolving its schema is the core of the workshop. You do not need to be a Kubernetes operator, or even plan to use Kubernetes.
-
 ## Given
+
+### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
+
+[Frontmania 2026](https://frontmania.com/) · Jaarbeurs, Utrecht 🇳🇱
+
+Kubernetes is famous for running containers, but its API model is the interesting part: flexible resources, desired state, live updates through watches, validation, and advanced access control. Platform engineers use these ideas every day. Frontenders usually only get the boring REST endpoint at the end. Isn't that a missed opportunity?
+
+I've built an open-source coffee-ordering demo where the whole audience gets admin rights: grab your phone and configure my demo, and let's see how live updates are not only cool but also useful for handling conflicts. This is not a talk about exposing your production infrastructure to the public internet. It is about running a small, dedicated Kubernetes API server as a product backend. Kubernetes may not become your best friend forever, but could it become your Backend for Frontend?
 
 ### GitOps Needs an API - Swiss Cloud Native Day 2026 *(17 September 2026)*
 
-[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/gitops-needs-an-api.pdf), [Repo](https://github.com/reverse-gitops/talks)
+[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/gitops-needs-an-api.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Watch on YouTube](https://www.youtube.com/watch?v=uBuf7Q91k9s)
+
+<div class="video-embed"><iframe src="https://www.youtube.com/embed/uBuf7Q91k9s" title="GitOps Needs an API — Swiss Cloud Native Day 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 GitOps works well. Well enough that high-level business intent ends up in Git too: customer tenants, feature rollouts, access policies. The hard part is not storing it there. The hard part is expecting business stakeholders or customers to manage it through pull requests and raw YAML.
 
