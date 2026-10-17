@@ -51,7 +51,7 @@ Application configuration is our practical case. We inspect a configurable coffe
 
 Kubernetes is famous for running containers, but its API model is the interesting part: flexible resources, desired state, live updates through watches, validation, and advanced access control. Platform engineers use these ideas every day. Frontenders usually only get the boring REST endpoint at the end. Isn't that a missed opportunity?
 
-I ran an open-source coffee-ordering demo where the whole audience got admin rights: everyone grabbed their phone and configured my demo, showing how live updates are not only cool but also useful for handling conflicts. It was not a talk about exposing your production infrastructure to the public internet. It was about running a small, dedicated Kubernetes API server as a product backend. Kubernetes may not become your best friend forever, but could it become your Backend for Frontend?
+I've built an open-source coffee-ordering demo where the whole audience gets admin rights: grab your phone and configure my demo, and let's see how live updates are not only cool but also useful for handling conflicts. This is not a talk about exposing your production infrastructure to the public internet. It is about running a small, dedicated Kubernetes API server as a product backend. Kubernetes may not become your best friend forever, but could it become your Backend for Frontend?
 
 ### GitOps Needs an API - Swiss Cloud Native Day 2026 *(17 September 2026)*
 
