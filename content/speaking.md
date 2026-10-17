@@ -35,14 +35,6 @@ Configuration is often some of the most critical logic in a system, yet many tea
 
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
 
-### What If All Configuration Could Have a Kubernetes-Style API? - DDC 2026 *(26 November 2026)*
-
-[DDC 2026 programme](https://www.developer-world.com/ddc-programm) · Half-day workshop · Hyatt Regency, Cologne (Köln) 🇩🇪
-
-The best REST API I have ever seen is Kubernetes, not because it runs containers, but because the API machinery underneath it is flexible enough to model many kinds of intent: typed resources, schema validation, optimistic concurrency, watches, status, events, audit, authentication, and resource-level authorization. Pods and deployments are just the famous examples.
-
-Application configuration is our practical case. We inspect a configurable coffee-ordering app and improve its model together, deciding how to split settings across one or more resource types, how to model the one-to-many relationships, how to define authorization, and the harder question of what happens to existing values when the model itself changes. You get hands-on in your own devcontainer, working at two levels: first changing the configuration, then changing the definition itself. Feeling the difference between changing config and evolving its schema is the core of the workshop. You do not need to be a Kubernetes operator, or even plan to use Kubernetes.
-
 ## Given
 
 ### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
