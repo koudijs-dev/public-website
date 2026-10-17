@@ -1,2 +1,13 @@
 public/
 external-sources/
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.playwright-cli/
+.agents/skills/*
+.claude/skills/*

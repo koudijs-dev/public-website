@@ -1,0 +1,26 @@
+{
+  "name": "public-website",
+  "version": "1.0.0",
+  "description": "This is the official website for myself and my company.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koudijs-dev/public-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/koudijs-dev/public-website/issues"
+  },
+  "homepage": "https://github.com/koudijs-dev/public-website#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0"
+  }
+}

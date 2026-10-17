@@ -1,0 +1,43 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Wait for PR preview environment
+      if: ${{ github.event_name == 'pull_request' }}
+      run: |
+        PR_URL="https://pr${{ github.event.number }}.preview.koudijs.dev/"
+        echo "Waiting for ephemeral PR preview environment at $PR_URL ..."
+        for i in $(seq 1 60); do
+          if curl -sSfL -o /dev/null "$PR_URL"; then
+            echo "Preview environment is live after ~$(( (i - 1) * 5 ))s."
+            echo "PLAYWRIGHT_BASE_URL=$PR_URL" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "Attempt $i/60: not ready yet, retrying in 5s..."
+          sleep 5
+        done
+        echo "::error::Preview environment $PR_URL did not become available within 5 minutes."
+        exit 1
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 7
