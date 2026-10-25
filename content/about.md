@@ -3,7 +3,7 @@ title: "About"
 weight: 1
 ---
 
-I help teams improve software delivery. From engineering workflows and CI/CD to platform engineering, Kubernetes, GitOps, and AI. Through koudijs.dev I work as a consultant, trainer, and speaker for organisations that want practical help, not hype.
+I help teams break software delivery. From engineering workflows and CI/CD to platform engineering, Kubernetes, GitOps, and AI. Through koudijs.dev I work as a consultant, trainer, and speaker for organisations that want practical help, not hype.
 
 **Consulting** I work with teams on software delivery trade-offs: improving workflows, introducing better delivery practices, and helping decide whether Kubernetes and platform engineering are actually the right next step. [Get in touch](#book)
 
