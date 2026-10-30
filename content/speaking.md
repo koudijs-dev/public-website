@@ -17,7 +17,7 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
 
-[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱
+[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/settings-that-break-production.pdf), [Repo](https://github.com/reverse-gitops/talks)
 
 Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behaviour just as much as new code.
 
