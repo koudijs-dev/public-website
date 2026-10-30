@@ -15,14 +15,6 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ## Upcoming
 
-### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
-
-[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/settings-that-break-production.pdf), [Repo](https://github.com/reverse-gitops/talks)
-
-Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behaviour just as much as new code.
-
-This talk starts with application settings that broke production. Each one led to the same uncomfortable questions: who made the change, where was it validated, and how do we stop the next one? Could important product configuration live in a separate Git repo, reviewed and promoted like code, while the people who change it never see Git and just use a nice settings screen? I'll show the design of the open-source tool I built to explore this and where it gets hard (conflicts, concurrency, and putting real authors on Git commits), then demo it live with the whole audience as admins.
-
 ### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
 
 [Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
@@ -36,6 +28,14 @@ Configuration is often some of the most critical logic in a system, yet many tea
 Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
 
 ## Given
+
+### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
+
+[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/settings-that-break-production.pdf), [Repo](https://github.com/reverse-gitops/talks)
+
+Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behaviour just as much as new code.
+
+This talk starts with application settings that broke production. Each one led to the same uncomfortable questions: who made the change, where was it validated, and how do we stop the next one? Could important product configuration live in a separate Git repo, reviewed and promoted like code, while the people who change it never see Git and just use a nice settings screen? I'll show the design of the open-source tool I built to explore this and where it gets hard (conflicts, concurrency, and putting real authors on Git commits), then demo it live with the whole audience as admins.
 
 ### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
 
