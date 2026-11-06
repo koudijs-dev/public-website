@@ -13,6 +13,10 @@ I believe in working in the open. Everything is a file, and the more I work with
 
 My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudijs/).
 
+## Upcoming
+
+Your conference? [Contact me](https://calendar.app.google/c2jMcQgREVgbKEj18)!
+
 ## Given
 
 ### (Ab)using the Kubernetes API as a Configuration Backend - Øredev 2026 *(6 November 2026)*
