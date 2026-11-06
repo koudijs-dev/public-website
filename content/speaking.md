@@ -15,23 +15,25 @@ My public speaking profile is on [Sessionize](https://sessionize.com/simonkoudij
 
 ## Upcoming
 
-### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
-
-[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
-
-Configuration is often some of the most critical logic in a system, yet many teams manage it with far less discipline than code. It lives in databases, gets edited through admin screens, bypasses review, mixes awkwardly with secrets, and moves across environments with weak packaging boundaries. This talk argues configuration should be treated as a delivery problem, not just a storage problem: capture validated intent through an API, then turn it into configuration that is tested, packaged, versioned, signed, and promoted through environments as controlled artifacts.
-
-### (Ab)using the Kubernetes API as a Configuration Backend - Øredev 2026 *(6 November 2026)*
-
-[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪
-
-Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
+Your conference? [Contact me](https://calendar.app.google/c2jMcQgREVgbKEj18)!
 
 ## Given
 
+### (Ab)using the Kubernetes API as a Configuration Backend - Øredev 2026 *(6 November 2026)*
+
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20261106-abusing-kubernetes-api.pdf), [Repo](https://github.com/reverse-gitops/talks)
+
+Configuration-heavy products keep reinventing the same backend machinery: typed objects, validation, permissions, audit trails, and some form of realtime change propagation. Over time, that configuration backend starts to look a lot like a control plane. This talk explores the Kubernetes API as a backend for configuration-heavy software products rather than as an infrastructure surface, including what the approach enables, which trade-offs it introduces, and where the model starts to break down.
+
+### Configuration Deserves a Software Delivery Process Too - Øredev 2026 *(5 November 2026)*
+
+[Øredev 2026 speaker page](https://oredev.org/program/da064424-8d62-40e7-bdf9-c0f082f422e9) · Malmö 🇸🇪 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20261105-config-deserves-better.pdf), [Repo](https://github.com/reverse-gitops/talks)
+
+Configuration is often some of the most critical logic in a system, yet many teams manage it with far less discipline than code. It lives in databases, gets edited through admin screens, bypasses review, mixes awkwardly with secrets, and moves across environments with weak packaging boundaries. This talk argues configuration should be treated as a delivery problem, not just a storage problem: capture validated intent through an API, then turn it into configuration that is tested, packaged, versioned, signed, and promoted through environments as controlled artifacts.
+
 ### We GitOps'd Everything Except the Settings That Break Production - Dutch Cloud Native Day 2026 *(30 October 2026)*
 
-[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/settings-that-break-production.pdf), [Repo](https://github.com/reverse-gitops/talks)
+[Dutch Cloud Native Day 2026](https://www.dutchcloudnativeday.nl/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20261030-settings-that-break-production.pdf), [Repo](https://github.com/reverse-gitops/talks)
 
 Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behaviour just as much as new code.
 
@@ -39,7 +41,7 @@ This talk starts with application settings that broke production. Each one led t
 
 ### Be BFFs with the Kubernetes API - Frontmania 2026 *(7 October 2026)*
 
-[Frontmania 2026](https://frontmania.com/) · Jaarbeurs, Utrecht 🇳🇱
+[Frontmania 2026](https://frontmania.com/) · Jaarbeurs, Utrecht 🇳🇱 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20261007-be-bffs-with-the-kubernetes-api.pdf), [Repo](https://github.com/reverse-gitops/talks)
 
 Kubernetes is famous for running containers, but its API model is the interesting part: flexible resources, desired state, live updates through watches, validation, and advanced access control. Platform engineers use these ideas every day. Frontenders usually only get the boring REST endpoint at the end. Isn't that a missed opportunity?
 
@@ -47,7 +49,7 @@ I've built an open-source coffee-ordering demo where the whole audience gets adm
 
 ### GitOps Needs an API - Swiss Cloud Native Day 2026 *(17 September 2026)*
 
-[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/gitops-needs-an-api.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Watch on YouTube](https://www.youtube.com/watch?v=uBuf7Q91k9s)
+[Session details](https://cloudnativeday.ch/sessions/1223005) · Mount Gurten, Bern 🇨🇭 · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20260917-gitops-needs-an-api.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Watch on YouTube](https://www.youtube.com/watch?v=uBuf7Q91k9s)
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/uBuf7Q91k9s" title="GitOps Needs an API — Swiss Cloud Native Day 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
@@ -59,7 +61,7 @@ I demoed this live using the open-source [`gitops-reverser`](https://github.com/
 
 ### What If Every Cozystack Change Became a Commit? - CozySummit Virtual 2026 *(26 May 2026)*
 
-[CozySummit event](https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-cozysummit-virtual-2026/) · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/cozystack/slides.pdf) · [Watch on YouTube](https://www.youtube.com/watch?v=dkyjOq-I7Zs)
+[CozySummit event](https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-cozysummit-virtual-2026/) · Slides: [PDF](https://github.com/reverse-gitops/talks/blob/main/dist/20260526-what-if-every-cozystack-change-became-a-commit.pdf) · [Watch on YouTube](https://www.youtube.com/watch?v=dkyjOq-I7Zs)
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/dkyjOq-I7Zs" title="What If Every Cozystack Change Became a Commit? — CozySummit Virtual 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
@@ -73,7 +75,7 @@ Much of what impacts production isn't code but configuration: business rules, fe
 
 ### Reverse GitOps - KubeCon Co-located Event *(23 March 2026)*
 
-[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · Slides: [PDF](https://raw.githubusercontent.com/reverse-gitops/talks/refs/heads/main/dist/the-gitops-paradox.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Watch on YouTube](https://www.youtube.com/watch?v=X3sUAsTPbDM)
+[KubeCon EU 2026 co-located session](https://colocatedeventseu2026.sched.com/event/2DY82) · Slides: [PDF](https://raw.githubusercontent.com/reverse-gitops/talks/refs/heads/main/dist/20260323-the-gitops-paradox.pdf), [Repo](https://github.com/reverse-gitops/talks) · [Watch on YouTube](https://www.youtube.com/watch?v=X3sUAsTPbDM)
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/X3sUAsTPbDM" title="The GitOps Paradox — KubeCon Platform Engineering Day 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
